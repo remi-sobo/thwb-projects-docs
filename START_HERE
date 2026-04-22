@@ -1,0 +1,88 @@
+# The House We Built + Trellis
+## Project Knowledge Library
+
+**Last updated:** April 22, 2026
+**Maintained by:** Remi Sobomehin (primary), Kendra Sobomehin (co)
+**Location:** github.com/remi-sobo/thwb-project-docs
+
+---
+
+## Who these docs are for
+
+Three audiences:
+
+1. **Us** (Remi and Kendra) — to stop re-explaining the company
+   to ourselves every Monday morning
+2. **Future collaborators** — advisors, designers, engineers,
+   investors — so anyone coming into THWB/Trellis can understand
+   the company in 30 minutes
+3. **Claude conversations** — every Cursor, Claude Code, and
+   claude.ai thread working on this company can reference these
+   docs to stay consistent
+
+## How to use them
+
+**Read them in order the first time.** Each doc builds on the
+previous one.
+
+**After that, reference as needed.** When writing copy, check
+the voice guide. When building a new feature, check the product
+spec. When rewriting the About page, check the brand
+architecture.
+
+## The 8 docs
+
+1. **01_company_brief.md** — One-pager. What THWB + Trellis
+   are, in 500 words. Start here when someone asks "what are
+   you building?"
+
+2. **02_brand_architecture.md** — The core architecture: THWB
+   is the content/story brand, Trellis is the product. How they
+   relate. Where each lives. Who runs each.
+
+3. **03_product_spec.md** — What Trellis IS. 11 pillars. Cy.
+   The kid view. The family meeting. What's live, what's
+   coming, what's cut.
+
+4. **04_brand_voice_guide.md** — How both brands sound and
+   look. Visual system. Tone. Voice differences between THWB
+   and Trellis. Examples of good copy.
+
+5. **05_writing_rules.md** — Anti-AI writing doc. Banned
+   words, no em dashes rule, sentence rhythm, examples.
+
+6. **06_operating_manual.md** — How Remi and Kendra work.
+   Roles. Weekly cadence. Decision rights. What gets cut first
+   under pressure.
+
+7. **07_2026_launch_plan.md** — Timeline, milestones, cut
+   list, revenue targets for year 1.
+
+8. **08_cy_design.md** — Cy's voice, interaction patterns,
+   boundaries, prompt engineering principles.
+
+## How these docs evolve
+
+**These are living documents.** Update them as the company
+learns. Version them in git. Edit freely. The goal isn't
+perfection on day one — it's capture what we know so we don't
+have to rebuild it every conversation.
+
+**Rules for edits:**
+- Commit messages describe what changed and why
+- Major rewrites discussed between Remi and Kendra first
+- Small edits (typos, added examples, clarifications) just ship
+
+## If you're new
+
+Read 00, 01, 02, 03 first. That gets you 80% of the company in
+under 30 minutes.
+
+Then if you're working on:
+- Content: read 04, 05
+- Product: read 03, 08
+- Growth/launch: read 06, 07
+
+---
+
+*A home is a system. A family is a company. A blueprint is a gift.*
