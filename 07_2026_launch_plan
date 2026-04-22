@@ -1,0 +1,241 @@
+# 2026 Launch Plan
+
+Timeline, milestones, cut list. Updated April 22, 2026.
+
+---
+
+## The target
+
+**Mid-July 2026:** Paid beta launches. 5 families. $29/month each.
+
+**End of 2026:** 50-100 paying families.
+
+**End of 2027:** 500 paying families. $174K ARR.
+
+**End of 2029:** 5,000 paying families. $1.74M ARR. Decision
+point on whether to raise institutional capital.
+
+---
+
+## The 12-week plan (April 22 - July 15)
+
+### Weeks 1-2 (Apr 22 - May 5): Foundation
+
+**Product:**
+- Fix mobile Google OAuth (still broken as of today)
+- Running the Home pillar (Pillar 06) v1 shipped
+- Kid view polished
+
+**Sites:**
+- trellis.family live at a real URL
+- thehousewebuilt.family live with placeholder structure
+- Both pointing at each other via footers and CTAs
+
+**Personal:**
+- Vitality Protocol starts April 27
+- Five Seasons labs booked for baseline
+
+### Weeks 3-5 (May 6 - May 26): Content + Billing
+
+**Product:**
+- Stripe billing integrated
+- Subscription management working
+- Customer support flow stood up (initially remi@)
+- 60-second onboarding tested with 5 friend families (unpaid)
+
+**Sites:**
+- Kendra's first 10 THWB essays live
+- Framework pages (11 pillars philosophical) drafted
+- Our Story page shipped
+- Newsletter signup working
+
+**Outreach:**
+- Invite list compiled: 50 potential paid beta families
+- Private Notion/doc for tracking beta family status
+
+### Weeks 6-8 (May 27 - June 16): Pre-launch polish
+
+**Product:**
+- Second round of friend testing with payments real (soft beta)
+- Content library inside Trellis wired up (pulling from THWB)
+- Family Meeting refined based on feedback
+- Cy voice tuned based on real usage
+
+**Sites:**
+- Podcast launched (at least 3 episodes recorded and published)
+- THWB newsletter launched
+
+**Outreach:**
+- Direct outreach to 25 families for paid beta
+- Warm email + follow-up cadence
+
+### Weeks 9-11 (June 17 - July 7): Ship and Sell
+
+**Product:**
+- All P0 bugs closed
+- Performance optimized
+- Analytics wired up
+- Support docs written
+
+**Sites:**
+- FAQ populated based on beta feedback
+- Pricing page tuned
+- SEO basics solid
+
+**Outreach:**
+- First 5 paid families confirmed and onboarding
+- Weekly calls with each paid family
+
+### Week 12 (July 8 - July 15): Launch
+
+**Goal:** Mid-July public launch. 5 paying families already using
+Trellis. Waitlist open on trellis.family. 50 spots available for
+the first public cohort.
+
+**What launch means:**
+- trellis.family is live
+- thehousewebuilt.family is live
+- Pricing is live
+- Signup is live
+- Stripe charges real money
+- Kendra has a social push planned
+- Remi is available 100% that week for incoming families
+
+---
+
+## Beyond launch: Q3 and Q4 2026
+
+### Q3 (July - September)
+- Scale from 5 paid families to 25-50
+- Ship Pillars 7-8 (Health and Wellbeing, Your People)
+- Podcast hits weekly cadence
+- First 3 case studies written (real families, real stories)
+
+### Q4 (October - December)
+- Scale to 50-100 paid families
+- Ship Pillar 9 (Work and Purpose)
+- First major content marketing push (Kendra essays picked up by
+  Substack network or similar)
+- First real financial review: are we on track for 2027?
+
+---
+
+## The cut list (not building in 2026)
+
+Deferred to 2027 or later:
+
+**Product deferrals:**
+- Pillar 10 (Legacy) — too emotionally complex for v1
+- Pillar 11 (When It's Hard) — same reason, plus needs real
+  crisis design work
+- Plaid integration for banking (CSV import only for v1)
+- Pillar customization and reordering
+- Heavy SoboBucks economy for kids (keep the simple balance)
+- Voice-based meal logging
+- Photo-based meal logging
+- Real HealthKit sync
+- Native iOS app (web app only)
+- Native Android app (web app only)
+
+**Product boundaries:**
+- YGB Math inside Trellis (this is a separate project)
+- Jaiye's personal website (separate project)
+- Any AI features beyond Cy's current scope
+- Marketplace or directory features
+- Community/forum features for families
+- Live events inside the app
+
+**Content deferrals:**
+- Full THWB book (book proposal planning only)
+- Speaking tour (ad hoc, not scheduled)
+- Conference (not in 2026)
+- Full video production beyond podcast (minimal video in 2026)
+
+**Business deferrals:**
+- Raising outside capital (not until 100+ families AND both agree)
+- Hiring (not until revenue justifies a first hire)
+- Church Pack pricing and rollout (year 2)
+- Enterprise / school district tier
+- International expansion
+
+---
+
+## What "done" looks like for July 15
+
+**The product is ready if:**
+- All 5 beta families can onboard in under 60 seconds
+- Mobile works perfectly on iPhone and Android
+- Stripe charges and refunds work
+- Core journeys (login, add task, do family meeting, kid view)
+  all work without errors
+- Cy responds in under 5 seconds on average
+- The 5 families are willing to pay $29/mo real money
+
+**The site is ready if:**
+- trellis.family loads in under 2 seconds on mobile
+- thehousewebuilt.family loads and has real content
+- Both have working signup flows
+- Both link to each other correctly
+- FAQ answers the 20 most common questions
+- Pricing is clear and friction-free
+
+**The team is ready if:**
+- Remi has capacity to support 10-25 incoming families in July
+- Kendra has capacity to write weekly through the launch
+- The Sunday check-in has been consistent for 12 weeks
+- Neither of us has burned out
+
+---
+
+## What failure looks like
+
+We need to be honest about what "didn't work" would mean. Three
+scenarios:
+
+### Scenario A: No paying families
+If by September 2026 we have zero paying families, something's
+broken. Not the product. The distribution. We'd pause feature
+work and focus 100% on outreach and conversion.
+
+### Scenario B: 20 paying families, steady
+This is actually fine. It's slower than target but it's real.
+We'd keep building at a sustainable pace, keep iterating, and
+let word of mouth do its thing through 2027.
+
+### Scenario C: 5 paying families, mixed feedback
+Also okay, but requires discipline. The temptation will be to
+add features to win the next family. The right move is probably
+to spend more time with the 5 we have, figure out what's
+actually sweet for them, and double down.
+
+---
+
+## What success looks like at end of 2026
+
+**Quantitative:**
+- 50-100 paying families
+- $17K-$35K ARR
+- <5% monthly churn
+- NPS above 50
+- 6-7 pillars live
+
+**Qualitative:**
+- At least 10 testimonials we'd publish
+- Kendra's content library has 30+ pieces
+- Podcast has 20+ episodes
+- Marriage intact and strong
+- Kids thriving
+- Sunday check-ins consistently green
+
+If both columns are hit, 2026 was a great year. If quantitative
+wins but qualitative loses, we did it wrong.
+
+---
+
+## The north star, again
+
+**We cut the business before we cut each other.**
+
+Every decision on this timeline, every feature, every launch, is
+subordinate to that rule. If the plan starts breaking the family,
+we change the plan. The plan is a servant, not a master.
