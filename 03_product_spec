@@ -1,0 +1,692 @@
+# Product Spec: Trellis
+
+What Trellis is, feature by feature, pillar by pillar. The single
+source of truth for what the product does, what it doesn't do,
+and what's coming.
+
+This document is long because Trellis is not a small product.
+Read it in sections, not all at once.
+
+---
+
+## What Trellis is
+
+Trellis is the operating system for families. A web-based
+subscription app built on Next.js 14 (Pages Router) + Supabase +
+Vercel + the Anthropic API, with Twilio for SMS.
+
+Trellis gives a family a shared dashboard across 11 pillars of
+household life. Every family member has a role. Every pillar has
+its own tools, content, and context. Cy (AI steward) reads it all
+and surfaces one thing at a time.
+
+Subscribers pay $29/month or $290/year.
+
+---
+
+## The core user
+
+**Primary user:** The household lead parent (often, but not
+always, the mother). This is the person who carries the mental
+load of family logistics. Trellis is their product first.
+
+**Secondary user:** The other adult (partner, spouse, or
+co-parent). Co-equal access. Their own login. Shared household
+data.
+
+**Tertiary users:** Kids, ages 5-12 primarily, with a teen
+variant (13-17) coming later.
+
+**Access model:**
+- One family subscription
+- Two adult accounts (can be reduced to one for single parents)
+- Unlimited kid accounts under the household
+- Everyone sees the same house, age-appropriately
+
+---
+
+## What Trellis isn't
+
+- Not a social network
+- Not a parenting advice platform
+- Not a therapy or counseling service
+- Not a religious or faith-based product (faith-respectful, not
+  sectarian)
+- Not a banking or payment platform (finance tooling, yes;
+  banking, no)
+- Not an educational curriculum (educational content lives in
+  THWB, not Trellis)
+
+---
+
+## The 11 pillars
+
+Each pillar is a distinct module of the app. Each has its own
+tools, content, and Cy context. Pillars are vertical — a family
+can dive deep into one while barely touching another. All 11
+share the same data backbone so Cy can reason across them.
+
+### Pillar 01: Who We Are — LIVE
+
+**Purpose:** Identity and values. The family you're intentionally
+becoming.
+
+**Features:**
+- Family name, tagline, and founding story
+- Values document (5-10 core values, each with a definition)
+- Culture canvas (rituals, rules, language the family uses)
+- Household agreements (rules everyone signs off on)
+- Mission statement (short, revisitable)
+
+**Cy behavior:**
+- Surfaces values when decisions touch them
+- Asks quarterly: "Is this still who we are?"
+- Notices drift (e.g., family named "rest" as a value but
+  calendar is 95% full)
+
+**Kid view:**
+- Values shown visually (icons + words)
+- "Who we are" story told age-appropriately
+- Kids can add "what I'm proud of our family for"
+
+### Pillar 02: The Partnership — LIVE
+
+**Purpose:** The adult relationship at the center. Check-ins,
+shared values, conflict repair, private space.
+
+**Features:**
+- Weekly partnership check-in (guided prompts, both responses
+  saved)
+- Shared values doc (partnership-specific)
+- Couple calendar (date nights, trips, anniversaries)
+- Sealed notes (each partner writes privately, revealed only
+  when both opt in)
+- Conflict repair framework (7-step guided process)
+- Gratitude log (daily or weekly)
+
+**Cy behavior:**
+- Notices check-in cadence and surfaces when it's slipping
+- Suggests conflict repair framework if "conflict" keyword
+  appears in notes
+- Never mediates live conflicts — always refers out
+
+**Kid view:**
+- Kids don't see the partnership pillar
+- Only exception: anniversary countdowns for family context
+
+**Privacy:** Partnership pillar is private from kids by default
+and cannot be overridden.
+
+### Pillar 03: Raising Your Kids — LIVE
+
+**Purpose:** Each kid, named and known. Individual development,
+not blob-level parenting.
+
+**Features per kid:**
+- Profile (name, DOB, photo, current age)
+- School info (teacher, grade, address, schedule)
+- Health basics (allergies, pediatrician, blood type)
+- Developmental notes (what we're watching, milestones)
+- Interests and passions (updated quarterly)
+- Challenges (what they're working on, gently)
+- Their love language
+- Their parenting approach note (how we specifically parent
+  THIS kid)
+- Annual review (written once a year, archived forever)
+
+**Cy behavior:**
+- Surfaces individual kids when patterns emerge
+- Reminds of upcoming milestones
+- Suggests annual review when the kid's birthday approaches
+
+**Kid view:**
+- Each kid sees their own profile (age-appropriate fields only)
+- Can add their own interests and "what I want mom/dad to know"
+
+### Pillar 04: Time and Rhythms — LIVE
+
+**Purpose:** Days, weeks, seasons. The heartbeat of family life.
+
+**Features:**
+- Shared family calendar (Google Calendar integration, both
+  adults)
+- Morning routine builder (per kid, per adult)
+- Evening routine builder
+- Family meeting protocol (this is a big one, see below)
+- Season planner (quarterly cadence setter)
+- Holiday and tradition tracker (annual recurring events)
+- Weekly rhythm template
+
+**The Family Meeting (the killer feature):**
+
+Sunday evening, 30 minutes, both adults. Trellis walks you
+through five structured steps:
+
+1. **7-day audit** — Cy pulls both calendars. Walks through Mon
+   through Sun. Asks 2-4 questions per day. You answer, Trellis
+   captures.
+
+2. **Pillar round** — Quick status across all 11 pillars. What's
+   loud, what's quiet. Anything needing attention.
+
+3. **Commit** — You pick 5 decisions max. Each becomes a task
+   with owner, date, pillar tag.
+
+4. **Capture** — Shopping list, meal plan, calendar adds, notes.
+   All saved.
+
+5. **Close** — One sentence from each adult. One prayer or
+   intention. Done.
+
+**Cy behavior:**
+- Drives the Family Meeting flow (Cy is the facilitator)
+- Notices when the meeting is overdue
+- Flags patterns across weeks (e.g., "You've added 'date night'
+  in commits 6 weeks in a row. Want to make it a recurring event
+  instead?")
+
+**Kid view:**
+- Kids see their own morning/evening routines
+- Kids see family calendar filtered to events relevant to them
+
+### Pillar 05: Money and Stewardship — LIVE
+
+**Purpose:** Budget, goals, generosity. How we steward what
+we've been given.
+
+**Features:**
+- Monthly budget (categories, targets, actuals via CSV import)
+- Savings goals (named, tracked, celebrated)
+- Generosity log (tithing, donations, gifts)
+- Financial calendar (bills, subscriptions, big payments)
+- Debt tracker (payoff plan if applicable)
+- Net worth snapshot (quarterly)
+- Finance Friday ritual (weekly 15-min check-in guided by Cy)
+
+**CSV import:** Users upload CSV from their bank or Monarch/YNAB
+for now. Plaid integration deferred to 2027.
+
+**Cy behavior:**
+- Runs Finance Friday (Fridays, 4pm default, adjustable)
+- Notices spending patterns against budget
+- Surfaces savings goal milestones
+- Never gives investment advice
+
+**Kid view:**
+- Kids see their SoboBucks balance (separate kid economy)
+- Kids don't see family financials
+
+### Pillar 06: Running the Home — JULY 2026 LAUNCH PRIORITY
+
+**Purpose:** Meals, chores, inventory, flow. The physical house
+working well.
+
+**Features (v1, July 2026):**
+- Weekly meal plan (7-day grid, breakfast/lunch/dinner)
+- Grocery list (shared, add items tagged by meal)
+- Chore rotation (daily, weekly, monthly rotations per person)
+- Home inventory (cleaning supplies, pantry basics, reorder
+  thresholds)
+- Home maintenance calendar (HVAC filter, smoke detectors, etc.)
+
+**Features deferred to v2:**
+- Recipe library integration
+- Voice/photo meal logging
+- Smart fridge integration
+- Auto-ordering via delivery services
+
+**Cy behavior:**
+- Generates weekly meal plan draft (reviewable by adults)
+- Suggests grocery list from meal plan
+- Reminds on maintenance cadence
+- Tracks chore completion across kids
+
+**Kid view:**
+- Kids see their assigned chores with pictures
+- Tap to mark complete
+- Earn SoboBucks for completed chores
+
+### Pillar 07: Health and Wellbeing — FALL 2026
+
+**Purpose:** Body, mind, medical. Per person.
+
+**Features:**
+- Medical calendar (appointments, vaccinations, cleanings)
+- Medication tracker (optional, per person)
+- Family health history (hereditary conditions, allergies)
+- Mental health resources (links out, not in-app therapy)
+- Fitness/activity logging (light — not a fitness app)
+- Sleep tracking (manual or device integration later)
+- Wellbeing check-in (weekly per person, 3-question prompt)
+
+**Cy behavior:**
+- Surfaces upcoming appointments
+- Notices missed medications (if tracked)
+- Suggests wellbeing check-ins
+- Escalates concerning patterns to "consider talking to a
+  professional"
+
+**Kid view:**
+- Kids see their own appointments
+- Can mark "how I'm feeling" with age-appropriate prompts
+
+### Pillar 08: Your People — FALL 2026
+
+**Purpose:** The community around you. Extended family, close
+friends, godparents, mentors.
+
+**Features:**
+- People directory (names, how they relate, how to reach them)
+- Birthday and anniversary calendar
+- Prayer/intention list (who we're praying for or thinking of)
+- Mentor relationships (both directions — who mentors us, who
+  we mentor)
+- Hospitality tracker (who we've had over, who's had us)
+- Handwritten note log (who we should write, who wrote us)
+
+**Cy behavior:**
+- Reminds on birthdays (with a draft note suggestion)
+- Surfaces people we haven't connected with in X months
+- Suggests hospitality rhythm
+
+**Kid view:**
+- Kids see godparents, grandparents, close family friends
+- "People who love you" visualization
+
+### Pillar 09: Work and Purpose — FALL 2026
+
+**Purpose:** Vocation for each adult. Career, calling, and the
+rhythms that support them.
+
+**Features (per adult):**
+- Current role summary (company, role, start date)
+- Career goals (short-term, long-term)
+- Work calendar visibility to spouse (read-only)
+- Side projects and passion work
+- Reading/learning log
+- Annual career review prompt
+
+**Cy behavior:**
+- Surfaces when one spouse's work is compressing on family time
+- Annual career review reminder
+- Notices learning/reading patterns
+
+**Kid view:**
+- Kids see "what mom/dad does" (age-appropriate summary)
+- Optional: kids can contribute thoughts to parents' work
+  patterns
+
+### Pillar 10: Legacy — 2027
+
+**Purpose:** What gets passed down.
+
+**Features (scoped for 2027):**
+- Annual letters to future generations
+- Family recipe archive
+- Tradition documentation (holidays, rituals, practices)
+- Story archive (kids' stories, parents' stories, grandparents')
+- Values across generations (what we're building on, what we're
+  departing from)
+- Financial legacy planning (wills, beneficiaries — light touch)
+
+**Cy behavior (2027):**
+- Annual letter prompts
+- Story capture from conversations
+- Tradition reminders
+
+### Pillar 11: When It's Hard — 2027
+
+**Purpose:** Crisis, conflict, grief, repair.
+
+**This pillar is the most important and the most carefully
+built.** Shipping it wrong would be worse than not shipping it.
+That's why it's 2027.
+
+**Features (scoped for 2027):**
+- Crisis check-in mode (Cy goes quieter, meetings compress)
+- Conflict resolution framework (7-step, already exists in
+  partnership)
+- Grief rhythms (how the family is actively grieving)
+- Repair and reconciliation tracker
+- Resource library (therapists, pastors, community)
+- Emergency protocols (who to call, where things are)
+
+**Cy behavior in crisis mode:**
+- Reduces proactive messaging
+- Only surfaces truly urgent items
+- Redirects to human help early and often
+- Never tries to be the counselor
+
+---
+
+## Cy (the always-on family steward)
+
+Detailed in `08_cy_design.md`. Summary here:
+
+**What Cy is:**
+- AI layer across all pillars
+- Powered by Claude from Anthropic
+- Reads family data, calendar, patterns
+- Surfaces one thing at a time via Observation + Question +
+  Capture
+
+**Voice rules:**
+- He/him pronouns
+- 2-4 sentences max
+- Direct, warm, unsoft
+- No em dashes, no emoji, no pep talks
+
+**Boundaries:**
+- Not a therapist, counselor, or pastor
+- Does not mediate live conflicts
+- Does not give medical, legal, or financial advice
+- Refers out to humans when the topic exceeds scope
+
+---
+
+## The kid experience
+
+The kid view is a different product. Designed for ages 5-12
+(teens get a closer-to-adult variant later).
+
+### Kid home screen
+- Their name and avatar
+- Today's routine (morning checklist with pictures)
+- Today's chores
+- Their SoboBucks balance
+- Today's schedule (calendar events relevant to them)
+- Family kudos feed (kind notes sent to them)
+
+### Kid features
+
+**Morning Routine:**
+Pictorial checklist. Brush teeth, make bed, get dressed, eat
+breakfast. Tap to complete. Small celebration animation. Tracked
+in Pillar 04.
+
+**Chores + Economy:**
+Assigned chores appear with descriptions. Tap when done. Earn
+SoboBucks. See balance grow. Save toward a goal (books, toys,
+experiences — parent-approved catalog).
+
+**Today For Me:**
+Their calendar view. Filtered to events relevant to them. What
+time practice is. When dinner is. When bedtime is.
+
+**Family Kudos:**
+Feed of kind notes from parents and siblings. Can send kudos to
+others. No public comments, no public anything.
+
+**Growing Journal:**
+A private journal where kids can write about their day,
+decorate with stickers, and parents can read if shared.
+
+### What kids don't have access to
+- Partnership pillar (fully hidden)
+- Family finances (except their own SoboBucks balance)
+- Cy's adult-oriented observations
+- Anything flagged private
+
+### Kid safety rules
+
+- No chat with people outside the household
+- No public profiles
+- No social feeds
+- No AI generation outside of light Cy prompts
+- Parents control the account
+- Kid content is always visible to parents
+- No ads, ever
+- No in-app purchases
+- COPPA-compliant (kids under 13 always require parent consent)
+
+---
+
+## The adult experience
+
+### Home dashboard (the first screen adults see)
+
+**Morning message from Cy:**
+- Today's calendar overview
+- The three things that matter today
+- Any flagged items from other family members
+
+**Pillar tiles:**
+- 11 cards in a grid
+- Each shows: pillar number, name, most recent activity, any
+  pending items
+- Tap any tile to enter the pillar
+
+**Quick adds:**
+- Add a task
+- Add to shared grocery list
+- Add to calendar
+
+**Presence:**
+- See when partner last logged in
+- See kid activity summary
+
+### Navigation
+
+**Primary tabs (bottom on mobile, left on desktop):**
+- Home (dashboard)
+- Pillars (grid of all 11)
+- Tasks (cross-pillar task view)
+- Calendar (unified)
+- Cy (direct chat)
+- Settings
+
+### Task system
+
+**Every task has:**
+- Title
+- Owner (who's responsible)
+- Due date (optional)
+- Pillar tag (which pillar this belongs to)
+- Priority (quadrant-style: urgent-important matrix)
+- Status (not started, in progress, done, deferred)
+- Notes
+- Optionally attached to a project
+
+**Task views:**
+- Today
+- This week
+- By pillar
+- By owner
+- Projects
+
+**Shared tasks:**
+- Either adult can create, edit, complete
+- Both see updates in real time
+- Cy can suggest tasks but humans confirm
+
+### Calendar
+
+- Integrates with Google Calendar (both adults)
+- Unified view
+- Color-coded by pillar
+- Kids' events filtered to their view
+- Family Meeting is a recurring weekly event
+
+### Content library
+
+**Integrated into pillars.** Content sourced from The House We
+Built (essays, podcast episodes, frameworks) appears inside
+relevant pillars in Trellis.
+
+Example: An essay Kendra writes about "How we structure Sunday
+evenings" appears inside Pillar 04 (Time and Rhythms), under a
+"Reading" or "Library" tab.
+
+**Content types:**
+- Essays (long-form written)
+- Podcast episodes (embedded player)
+- Frameworks (structured explanations)
+- Videos (minimal in 2026)
+
+**Delivery:**
+- Published to THWB first
+- Syndicated into Trellis pillars via admin interface
+- Paid Trellis families get full library
+- Non-subscribers can read on THWB (most of it free)
+
+---
+
+## Technical architecture
+
+### Stack
+- **Framework:** Next.js 14 Pages Router (existing)
+- **Database:** Supabase (PostgreSQL)
+- **Hosting:** Vercel
+- **Auth:** Supabase Auth (Google OAuth + email/password)
+- **AI:** Anthropic API (Claude) via server-side calls
+- **Messaging:** Twilio (SMS for reminders, optional)
+- **Payments:** Stripe (coming July 2026)
+- **Analytics:** Vercel Analytics
+- **Error tracking:** Sentry (not yet wired up)
+
+### Data model (high-level)
+
+**Households:** The top-level unit. One subscription per household.
+
+**Users:** Adults and kids within a household. Separate auth per user.
+
+**Pillars:** Each household has all 11 pillars scaffolded. Features
+activate as pillars go live.
+
+**Tasks:** Belong to a household, tagged to a pillar, assigned to
+a user, optionally grouped into projects.
+
+**Calendar events:** Synced from external calendars, tagged to
+pillars, visible per user role.
+
+**Cy interactions:** Logged per household for context, not for
+training. Fully private.
+
+**Content items:** Essays, podcasts, frameworks. Sourced from
+THWB CMS, served into Trellis pillars.
+
+### Performance targets
+- Time to First Byte: <200ms
+- Largest Contentful Paint: <1.5s
+- Interactive: <2s
+- Cy response time: <5s for most queries
+
+### Mobile strategy
+- Progressive Web App (PWA) for v1
+- Works on any modern mobile browser
+- Native iOS/Android deferred to 2027
+
+---
+
+## Admin system
+
+Remi (and eventually Kendra, for content) needs admin access.
+
+**Admin features:**
+- Household management (view any household for support)
+- Content management (publish essays, podcasts, frameworks to
+  pillars)
+- Metrics dashboard (signups, churn, active users, revenue)
+- Support queue (family-reported issues)
+- Feature flags (ship features to specific households first)
+
+**Current admin emails:**
+- remi@ambitionangels.org
+- kendrasobo@gmail.com
+
+**Admin UI lives at:** `/admin` (protected route, email-gated)
+
+---
+
+## Privacy and data principles
+
+### What we see
+- Everything a household puts into Trellis
+- Aggregated, anonymized metrics across all households
+
+### What we don't see
+- Individual message content of DMs (we don't have DMs)
+- Anything outside Trellis (no email scraping, no social scraping)
+- Kids' data beyond what parents configure
+
+### What we do with data
+- Serve the product (that's it)
+- Improve the product via aggregated, anonymized metrics
+- Support the family if they ask for help
+
+### What we never do
+- Sell data to third parties
+- Train AI models on family data
+- Share data across households
+- Use data for advertising
+
+### What families can do
+- Export their entire household data as JSON
+- Delete their household (30-day grace period, then permanent)
+- Control kid data and permissions
+
+---
+
+## What's cut from v1 (mid-July 2026 launch)
+
+From the 11 pillars, what's fully shipped at launch:
+- Pillars 1-5 (polished)
+- Pillar 6 (Running the Home) in v1 form
+- Pillars 7-11 scaffolded but marked "coming soon"
+
+From feature ambitions, what's NOT in v1:
+- Native iOS app
+- Native Android app
+- Plaid banking integration (CSV import only)
+- Voice-based anything (voice meal logging, voice Cy)
+- Photo-based meal logging
+- Auto-meal-planning from recipes
+- Real-time collaborative editing
+- Video content library (podcast embeds only)
+- Marketplace / content from external creators
+- Community / forum features
+- Church Pack admin UI
+- Multi-household support (one household per subscription)
+- Multi-language (English only for v1)
+- Offline mode
+- Advanced reporting / analytics for families
+
+---
+
+## What success looks like for the product
+
+### End of July 2026
+- 5 paying families actively using daily
+- All five have completed at least 4 Family Meetings
+- Cy voice feels right to all five
+- No critical bugs
+- NPS from the five: 40+
+
+### End of 2026
+- 50-100 paying families
+- Monthly churn under 5%
+- Cy interaction quality consistent across all households
+- Content library has 30+ items integrated into pillars
+- Running the Home pillar is stable and loved
+- Families are generating their own content inside pillars
+  (notes, check-ins, rituals)
+
+### End of 2027
+- 500 paying families
+- All 11 pillars in at least beta
+- Pillar 11 (When It's Hard) carefully shipped
+- Native mobile apps
+- Church Pack pilot with 3-5 churches
+
+---
+
+## The product's north star
+
+**A family opens Trellis on a Tuesday morning. The house feels
+lighter.**
+
+That's the test. Every feature, every release, every Cy
+interaction should make Tuesday morning lighter. If a feature
+makes Tuesday harder, we don't ship it.
+
+Everything else is detail.
