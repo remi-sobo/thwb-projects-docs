@@ -1,0 +1,253 @@
+# Writing Rules
+
+The anti-AI-slop document. What we don't write, and why.
+
+This document exists because AI-generated copy has a smell. It's
+confident, polished, and utterly forgettable. Our writing can't
+smell like that. Our readers are parents running real lives.
+They don't have time for empty words.
+
+---
+
+## The absolute rules
+
+### 1. No em dashes. Ever.
+
+The em dash (—) is the fingerprint of AI writing in 2026. LLMs
+love them. Every Claude, ChatGPT, and Gemini output has too many.
+Readers have learned to spot the tell.
+
+We use:
+- Periods (most of the time)
+- Commas (for flow)
+- Semicolons (rarely, when a period is too hard a stop)
+- Colons (for lists or declarations)
+- Parentheses (for asides)
+
+We do not use em dashes, en dashes, or double hyphens as em dash
+substitutes.
+
+**Wrong:** "The family meeting — thirty minutes, once a week — changed everything."
+**Right:** "The family meeting changed everything. Thirty minutes, once a week."
+
+### 2. Banned words and phrases
+
+These words have been bleached of meaning by overuse. Kill on
+sight.
+
+**Always cut:**
+- Transformative / transform
+- Holistic
+- Pivotal
+- Navigate (as a verb applied to abstract things)
+- Leverage (as a verb)
+- Revolutionize / revolutionary
+- Empower / empowering
+- Unlock (as applied to potential, value, possibility)
+- Journey (when used as a metaphor for a product experience)
+- Seamless / seamlessly
+- Cutting-edge
+- State-of-the-art
+- Game-changing / game-changer
+- Disruptive / disrupt
+- Synergy / synergistic
+- Curated (when applied to anything we didn't physically select)
+- Elevate (as a verb)
+- At the end of the day
+- In today's fast-paced world
+- We believe that
+- We're passionate about
+- We're on a mission to
+
+**Use with caution:**
+- Intentional (okay when specific, not when decorative)
+- Authentic (we earn it, we don't claim it)
+- Community (only when we mean actual people, not vibes)
+
+### 3. No pep talks
+
+We don't tell people how to feel. We don't cheerlead. We don't
+end paragraphs with "You've got this!"
+
+Parents reading our copy are already trying. They don't need
+encouragement. They need information.
+
+**Wrong:** "You've got this, mama! Every family deserves this kind of care!"
+**Right:** "The Sunday meeting takes 30 minutes. Here's how ours runs."
+
+### 4. No moralizing
+
+We don't preach. We don't tell people what a "good family" looks
+like. We share what we do and let them decide.
+
+**Wrong:** "Real families make time for each other."
+**Right:** "We make time for each other on Sundays. Here's how."
+
+### 5. No AI hedging
+
+AI loves to hedge. We don't.
+
+**Words to cut when they soften a real claim:**
+- Sometimes
+- Often
+- Typically
+- Generally
+- May / might
+- Could / would
+- Various
+- Certain
+
+If we're not sure, we say so directly: "We don't know yet." If we
+are sure, we say it without hedging.
+
+**Wrong:** "Some families may find that having a weekly meeting could potentially help them navigate their scheduling challenges."
+**Right:** "A weekly family meeting fixes most scheduling problems."
+
+### 6. Active voice, almost always
+
+**Wrong:** "Meals are planned by Cy each week."
+**Right:** "Cy plans your meals each week."
+
+Passive voice is okay when the actor is genuinely unknown or
+irrelevant, but that's rare in our writing.
+
+### 7. Short sentences mixed with longer ones
+
+Rhythm matters.
+
+Short sentences punch.
+
+Longer sentences give the reader a place to breathe and to follow
+a thought through to its natural conclusion, which is how humans
+actually think and speak.
+
+Then short again.
+
+This rhythm is what distinguishes written language from machine
+language.
+
+### 8. Specific over general
+
+Always.
+
+**Wrong:** "Families can struggle with scheduling."
+**Right:** "Last Tuesday, Kendra and I both forgot Kemi had a dentist appointment."
+
+### 9. No stacked prepositions
+
+**Wrong:** "In the context of how we think about the structure of family life in the modern age."
+**Right:** "How modern families actually work."
+
+### 10. One idea per paragraph
+
+If a paragraph has three different thoughts, break it into three
+paragraphs.
+
+---
+
+## The smell test
+
+Before publishing anything, read it out loud.
+
+If a sentence makes you cringe when you speak it, rewrite it.
+
+If a paragraph feels like it could have been written by anyone
+selling anything, rewrite it.
+
+If the whole piece feels like it doesn't sound like you, start
+over.
+
+---
+
+## The Kendra test
+
+When writing for THWB or Trellis, ask: "Would Kendra say this?"
+
+If the answer is no, rewrite. Her ear is one of our best quality
+controls.
+
+---
+
+## Examples of the voice working
+
+### Good THWB opening (from an essay)
+
+> We tried everything. Notion dashboards. Google Calendar colors.
+> A shared grocery list that someone always forgot to check. A
+> family meeting that lasted 90 minutes and ended in nobody
+> wanting to do another one.
+>
+> Then one Sunday, we tried something embarrassingly simple. We
+> set a 30-minute timer. We opened one document. We answered
+> three questions.
+>
+> It's been two years. We haven't missed a Sunday since.
+
+Why it works: Specific (not "we tried many tools" — we named
+them). Honest (admits the 90-minute failure). Concrete (the
+30-minute timer, the three questions). Earns the reader's
+attention by being truthful.
+
+### Good Trellis section
+
+> The Family Meeting takes 30 minutes. Cy pulls both calendars.
+> Walks you through the week day by day. Asks 2-4 questions per
+> day. You commit to five decisions. You capture the plan. You
+> close with one sentence or one prayer.
+>
+> You walk into Monday clear.
+
+Why it works: Short sentences. Specific numbers. Product
+mechanics are visible. The emotional payoff is the last line,
+earned by the mechanics above it.
+
+### Good Cy message
+
+> CY · MORNING, TUESDAY
+>
+> Jaiye has practice three nights this week. Is there a version
+> of the week where he gets two?
+
+Why it works: One observation. One question. Enough specificity
+that the parent recognizes their own life. No advice. No judgment.
+
+---
+
+## What to do when writing with Claude
+
+Claude (me) is not immune to AI slop. If you're using me to
+draft copy:
+
+1. **Tell me "no em dashes" every time.** I'll still slip. Catch me.
+2. **Ask for one sentence at a time.** Long blocks hide sins.
+3. **Read it out loud.** If I wrote something you wouldn't say,
+   ask me to redo it.
+4. **Reject first drafts aggressively.** The third draft is
+   usually where we find the voice.
+
+---
+
+## When you don't know what to write
+
+Three prompts that unlock the voice:
+
+1. **"How would I say this to Kendra at the kitchen table?"**
+2. **"What's the most specific example I can use here?"**
+3. **"What would I cut if this had to be half as long?"**
+
+If the answer to #3 is "I don't know," the piece isn't done.
+
+---
+
+## One more absolute rule
+
+**We write to one person.**
+
+Not "families." Not "parents." Not "customers." One person. One
+tired mom on her phone at 10pm. One dad driving home from work
+thinking about how Tuesday went. One single parent wondering if
+they're doing enough.
+
+When we write to everyone, we speak to no one.
+
+When we write to one specific person, we speak to everyone.
