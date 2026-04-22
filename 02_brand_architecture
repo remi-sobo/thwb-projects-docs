@@ -1,0 +1,186 @@
+# Brand Architecture
+
+## The two-brand system
+
+**The House We Built (THWB)** and **Trellis** are two brands
+owned by one company. Each does a different job. Each has its
+own home. Together they form a content-plus-product system.
+
+## What each brand is
+
+### The House We Built
+
+**What it is:** The media and content brand. The story. The
+philosophy.
+
+**What it includes:**
+- The podcast (The House We Built, weekly/bi-weekly)
+- Essays and long-form writing by Remi and Kendra
+- The framework — the 11 pillars in rich philosophical form
+- The Sunday letter (newsletter)
+- The family's story
+- Future: courses, books, speaking, possibly a conference
+
+**Who runs it:** Kendra (primary). Remi contributes essays when
+relevant. She holds editorial direction, voice, content cadence.
+
+**Domain:** thehousewebuilt.family
+
+**Purpose in the funnel:** Top. Trust-building. Audience
+development. Discovery. Warm readers who may eventually convert
+to Trellis subscribers.
+
+**Revenue:** None directly in year one. Potential future streams
+include paid newsletter tier, courses, speaking, books.
+
+**Aesthetic:** Cream dominant. Forest accents. Magazine/editorial.
+Kinfolk meets Every.to. Slow internet.
+
+### Trellis
+
+**What it is:** The software product. The app. The operating
+system.
+
+**What it includes:**
+- The authenticated app at trellis.family/app
+- The marketing site at trellis.family
+- 11 pillars of household leadership
+- Cy (AI family steward)
+- Family Meeting
+- Kid view
+- Task system
+- Content library (essays and frameworks served inside pillars,
+  sourced from THWB writing)
+
+**Who runs it:** Remi (primary). Product, engineering, customer
+experience, growth.
+
+**Domain:** trellis.family (and trellisfamily.com for typo
+protection)
+
+**Purpose in the funnel:** Bottom. Conversion. Revenue.
+
+**Revenue:** Direct. $29/mo per family or $290/year. This is the
+monetization engine.
+
+**Aesthetic:** Forest dark dominant. Gold accent. Cream text.
+Oura meets Notion. Warm but capable. Tech-respectable but not
+techy.
+
+## How they relate
+
+**THWB content FEEDS Trellis pillars.**
+
+Every essay Kendra writes about partnership communication can
+live inside Pillar 02 (The Partnership) in the Trellis app.
+Every podcast episode about rhythm can live inside Pillar 04
+(Time and Rhythms). Every framework piece about money can live
+inside Pillar 05 (Money and Stewardship).
+
+The THWB content library becomes Trellis subscription value.
+Paying families get access to everything.
+
+Non-paying visitors to thehousewebuilt.family can read most
+content free. This is intentional. Generosity drives trust.
+Trellis monetizes the depth and the tool, not the writing.
+
+## The URL architecture
+thehousewebuilt.family/          THWB homepage
+thehousewebuilt.family/essays    Essays archive
+thehousewebuilt.family/podcast   Podcast episodes
+thehousewebuilt.family/framework The 11 pillars philosophically
+thehousewebuilt.family/our-story About us (full)
+thehousewebuilt.family/trellis   Bridge to the product
+trellis.family/                  Trellis marketing homepage
+trellis.family/how-it-works      Product walkthrough
+trellis.family/pillars           11 pillars operationally
+trellis.family/cy                Cy's feature page
+trellis.family/pricing           Pricing
+trellis.family/made-by           About the family (short)
+trellis.family/app/*             The authenticated app
+
+## Cross-linking rules
+
+**On every THWB page:**
+- Footer: "We built Trellis, the operating system for families →"
+- Essay endings (when relevant): "If you want a tool to help
+  with this, that's what Trellis is for →"
+
+**On every Trellis page:**
+- Footer: "A product of The House We Built — read our story →"
+- Pillar detail pages: "Read our essays on [pillar] at The
+  House We Built →"
+- Made by page: "The full story lives at thehousewebuilt.family →"
+
+**Rule:** Cross-links are warm invitations, never hard pushes.
+Each brand respects the other brand's job.
+
+## Visual relationship
+
+Think of THWB and Trellis as a light outfit and a dark outfit
+made from the same fabric. Same typography (Cormorant Garamond +
+Plus Jakarta Sans). Same color palette (forest, gold, cream,
+sage). Different dominant colors per site.
+
+Apple does this with apple.com (light) and developer.apple.com
+(dark). Framer does it with framer.com (light marketing) and
+their app-focused dark pages. Same designer clearly made both.
+Same company. Different jobs.
+
+A visitor who lands on both should know they're different things
+but feel the same soul.
+
+## Why we separated them
+
+Three reasons:
+
+1. **Different jobs.** Content needs to breathe. Product needs
+   to convert. One site can't do both well.
+
+2. **Different operators.** Kendra runs THWB. Remi runs Trellis.
+   Separation lets each move at their own pace without blocking
+   the other.
+
+3. **Different tech needs.** THWB needs a CMS/MDX flow for easy
+   content publishing. Trellis needs Stripe, auth, subscription
+   management. Different stacks, different deploy cadences,
+   different failure modes.
+
+## When they come together
+
+**At the point of conversion.** A reader on THWB clicks "Try
+Trellis" and lands on trellis.family. The handoff is warm,
+expected, deliberate.
+
+**At the content library inside Trellis.** Paid families see
+THWB writing inside the relevant pillars of the app. Same
+content, different rendering, different context.
+
+**At the founder level.** Remi and Kendra are both seen across
+both brands. The family photo lives on both sites. The family
+story lives on both sites. The authenticity is unified.
+
+## What could break this architecture
+
+Three risks, named for vigilance:
+
+1. **Brand drift.** If Trellis starts feeling "corporate" and
+   THWB starts feeling "salesy," we've broken the split. Check
+   the voice guide quarterly.
+
+2. **Content becoming feature.** If THWB essays start feeling
+   like Trellis product marketing, we've lost the content soul.
+   Essays earn their place because they teach, not because they
+   sell.
+
+3. **Feature becoming content.** If Trellis pillar pages become
+   long philosophical reads, we've lost product clarity. Product
+   pages sell and explain, philosophy lives on THWB.
+
+## The north star
+
+**THWB helps families believe they can build on purpose.**
+**Trellis helps them actually do it.**
+
+One without the other still works. Both together is what we're
+aiming for.
