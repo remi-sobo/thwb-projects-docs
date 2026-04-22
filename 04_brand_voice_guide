@@ -1,0 +1,286 @@
+# Brand Voice Guide
+
+How The House We Built and Trellis sound, look, and feel. Shared
+DNA, different jobs.
+
+---
+
+## The shared soul
+
+Both brands are built on the same human truth: **a family is the
+most important institution in the world, and it deserves to be
+led on purpose.**
+
+That truth shapes everything. Every headline. Every button label.
+Every pixel. If a piece of copy or design doesn't make a family
+feel seen, respected, or equipped, it's wrong and we cut it.
+
+## Shared principles (both brands)
+
+**1. We write like we talk to someone we love.**
+Not to a crowd. Not to a persona. To one tired parent, reading
+on their phone at 10pm, who needs the thing to make sense and
+feel warm without being saccharine.
+
+**2. We earn every word.**
+No filler. No hedge. No "in today's fast-paced world." Every
+sentence carries its own weight or it goes.
+
+**3. We're specific over general.**
+"Tuesday at 5:47pm" beats "the evening." "Jaiye's practice"
+beats "your child's activity." Specificity is warmth.
+
+**4. We show, we don't preach.**
+We tell stories, share scenes, describe moments. We don't tell
+people how to feel about their family. They already know.
+
+**5. We're warm but not soft.**
+We have a spine. We push back when the industry says families
+should accept chaos. We don't apologize for believing this
+matters.
+
+---
+
+## Where the two voices diverge
+
+### THWB voice: reflective, literary, unhurried
+
+THWB is the brand that thinks out loud. The voice is essayistic,
+warm, confident, sometimes funny, often quiet. It sounds like a
+Sunday morning conversation at the kitchen table with a couple
+you trust.
+
+**THWB sounds like:**
+- Substack at its best
+- Kinfolk magazine's writing
+- A Ta-Nehisi Coates personal essay
+- A great Tim Ferriss intro
+- Your wisest friend who also happens to be funny
+
+**THWB avoids:**
+- Hustle language
+- Marketing speak
+- Urgency
+- "Game-changing" or any hype word
+- Lists of 10 Things You Must Know
+- Clickbait
+
+**THWB example:**
+
+> On Sunday nights, we used to fight. Not loudly. Just that tired,
+> quiet fighting that happens when two people have been pulling
+> the wagon in different directions all week and nobody has the
+> energy to name it.
+>
+> The fix wasn't more love. We had plenty of that. The fix was a
+> meeting. Thirty minutes. Every Sunday. Same time, same couch.
+> And a format so simple it felt almost embarrassing the first
+> time we tried it.
+
+### Trellis voice: direct, confident, capable
+
+Trellis is the product. The voice is clear, specific, and
+builder-like. It sounds like a well-designed tool that respects
+your time. Premium but not cold. Friendly but not cute.
+
+**Trellis sounds like:**
+- Linear's product pages
+- Oura's marketing site
+- A Stripe docs page when it's doing its job
+- A confident founder explaining what their product actually does
+
+**Trellis avoids:**
+- Marketing fluff
+- "Revolutionize" / "transform" / any empty verb
+- Long philosophical paragraphs (save those for THWB)
+- Feature lists without context
+- Startup speak
+
+**Trellis example:**
+
+> Trellis pulls both your calendars. Day by day. Cy asks two
+> to four questions per day. You commit to five decisions. You
+> walk into Monday clear.
+>
+> $29/month. All 11 pillars. Both parents. Every kid. One app.
+
+---
+
+## Cy's voice (inside Trellis only)
+
+Cy is a character, not a brand. He has his own voice that sits
+within Trellis but isn't the Trellis product voice. His voice
+rules:
+
+- He/him pronouns, always
+- Two to four sentences per message, maximum
+- One observation, one question, one implied action
+- No pep talks
+- No moralizing
+- No "how are you feeling?"
+- No emoji
+- Warm, educated, unsoft
+
+Cy's voice gets its own document — see `08_cy_design.md`.
+
+---
+
+## Visual system
+
+### Shared tokens
+
+Both brands use the same design tokens to keep the family feel.
+
+**Colors:**
+- Forest: `#1A3020` (primary dark)
+- Forest-deeper: `#0F1F14`
+- Forest-mid: `#254030`
+- Gold: `#C9952A` (primary accent)
+- Gold-light: `#E3B54F`
+- Cream: `#F5F0E8` (primary light)
+- Cream-dim: `#C9BFB0`
+- Sage: `#6B9060` (occasional accent)
+
+**Typography:**
+- Display: Cormorant Garamond (serif, italic encouraged for emphasis)
+- Body/UI: Plus Jakarta Sans (clean geometric sans)
+- Mono: JetBrains Mono (rare, technical use only)
+
+**Spacing scale:**
+Standard Tailwind scale. Generous on both sites. White space is
+a feature.
+
+### Trellis visual treatment
+
+**Dominant:** Forest `#1A3020`
+**Accent:** Gold `#C9952A`
+**Text:** Cream `#F5F0E8` (on dark), Forest (on cream cards)
+
+**Aesthetic reference:** Oura mixed with Notion, with a warmer
+heart. Premium but not cold. Capable but not corporate. Product
+screenshots glow softly. Cards have subtle gold borders.
+Photography is minimal — mostly product UI with one or two
+family moments as emotional anchors.
+
+**Feels like:** opening a beautifully designed tool that was
+made by thoughtful people who care about their work and your
+family.
+
+### THWB visual treatment
+
+**Dominant:** Cream `#F5F0E8`
+**Accent:** Forest `#1A3020` and Gold `#C9952A` used sparingly
+**Text:** Forest (on cream), Cream (on forest accents)
+
+**Aesthetic reference:** Kinfolk meets Every.to. Editorial.
+Slow internet. Generous margins. Big serif headlines. Ample
+white space. Photography earns its place — real family moments,
+warm light, nothing staged.
+
+**Feels like:** opening a beautifully edited magazine that also
+happens to be written by people who actually live the thing
+they're writing about.
+
+### Photography rules
+
+Both brands use the same photographic approach:
+
+- Real, not staged
+- Warm light (golden hour, window light, kitchen light)
+- Family in the frame when relevant (Remi, Kendra, kids)
+- Hands, tables, objects of everyday life — acceptable
+- Stock photography — never
+- Overly polished "lifestyle" imagery — never
+- Anything AI-generated as human photography — never
+
+When we need product screenshots (Trellis), they should look
+like the actual product, slightly idealized (clean data, no
+typos, realistic scenarios).
+
+### Iconography
+
+- Use Lucide icons (already in the stack) for UI
+- Avoid heavy illustrations
+- No mascots
+- No anthropomorphized objects
+- Icons should feel drawn, not stamped
+
+---
+
+## Writing patterns that work
+
+### Headlines
+
+THWB headlines are often declarative and sometimes poetic.
+
+Examples:
+- "A home is built on purpose, or it isn't built at all."
+- "The cost of winging it."
+- "On Sunday meetings that actually work."
+
+Trellis headlines are direct and promise-forward.
+
+Examples:
+- "The operating system for families who want to build on purpose."
+- "Eleven pillars. One app. A calmer, more intentional home."
+- "Kids aren't an afterthought. They're half the house."
+
+### Subheads
+
+Short. Clarifying. Almost always one sentence.
+
+### Body copy
+
+Three-sentence paragraphs are ideal.
+Occasionally a single sentence stands alone.
+Occasionally a five-sentence paragraph breathes.
+Rhythm matters more than consistency.
+
+### CTAs (Trellis specifically)
+
+- "Start your family" (primary, recurring)
+- "See how it works"
+- "Try the free tour"
+- "Keep reading" (rare)
+
+Never: "Click here" / "Learn more" / "Submit"
+
+### Callouts and eyebrows
+
+All caps, letter-spacing 0.2em, small size (12-14px), gold or
+muted forest. Used sparingly to structure longer pages.
+
+---
+
+## What makes something "on brand"
+
+Ask three questions:
+
+1. **Would a tired parent reading this feel more respected than
+   before they started reading?**
+2. **Would I say this sentence out loud to Kendra without
+   cringing?**
+3. **If I ran this through a detector, would it come back as
+   "clearly written by a human who cared"?**
+
+If yes to all three, it's on brand.
+
+---
+
+## What kills the brand
+
+Three failure modes to watch for:
+
+**1. Corporate drift.**
+When our copy starts sounding like every other SaaS site. "Unlock
+your family's potential." "Transform how you parent." Kill these
+on sight.
+
+**2. Sentimental drift.**
+When we lean too hard on warmth and lose the spine. "We believe
+every family is a beautiful garden." Too much. Pull back.
+
+**3. Feature drift.**
+When we start listing features instead of telling people what
+changes in their life. Features tell, benefits sell, but stories
+convert.
