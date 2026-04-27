@@ -1,0 +1,272 @@
+# Operating Doctrine
+
+How we build, repair, and maintain Trellis. The rules we operate by.
+
+---
+
+## The philosophy
+
+A home is not built once. It is built every day. Trellis is the same.
+
+Every feature we ship is a commitment we make to every family who uses
+the product. Every repair we make has the potential to make things
+worse, not better.
+
+We build slow because we build for the long road. We repair carefully
+because every repair is a trauma to the system. We change only what
+must change.
+
+This doctrine exists because we've learned the hard way that velocity
+without discipline produces fragile software. Five paying families on
+May 25 deserve a product that works, not a product that mostly works
+when no one is looking.
+
+---
+
+## The five rules
+
+### 1. Nothing ships without testing
+
+"It typechecks" is not "it works."
+"It works on my machine" is not "it works for users."
+
+Before any code touches main:
+- Run it locally against real-ish data
+- For schema changes: apply the migration in a test environment first
+- For UI changes: check it in both dark and light mode
+- For changes to integrations (Google, Anthropic, Stripe, Supabase):
+  verify the integration still works end-to-end
+- For changes to authentication or authorization: log in as TWO different
+  users to confirm isolation
+
+The pattern: feature branch → push to GitHub → Vercel preview deploy →
+test on the preview URL → only then merge to main.
+
+### 2. One change at a time
+
+No more than one customer-visible change shipped per day.
+No more than one schema migration applied per day.
+No more than one new integration added per week.
+
+When the urge strikes to "while I'm in here, also fix X," resist. Ship
+the one change. Confirm it works. Come back for X tomorrow.
+
+This rule exists because compound changes hide their bugs in each
+other. When three things ship together and something breaks, you can't
+tell which thing broke it.
+
+### 3. Every change must be reversible
+
+Every commit lands as its own commit so it can be reverted alone.
+Every migration must be additive (new tables, new columns) — never
+destructive (renames, drops, type changes) without a multi-step plan.
+Every feature flag must default to OFF for existing users.
+No "while we're at it" cleanups bundled with shipping work.
+
+If you can't undo a change cleanly, you've committed to keeping it
+forever. Most of the time, that's not what you actually want.
+
+### 4. Small radius, always
+
+A bug fix that touches 1 file is trusted.
+A bug fix that touches 5 files needs review.
+A bug fix that touches 10+ files is a red flag — pause and ask whether
+you're solving the right problem.
+
+Same for features. If a feature requires sweeping changes across the
+codebase, the design is probably wrong. Find a smaller version.
+
+The Stewart Brand principle: every repair is a trauma to the system.
+Smaller radius, smaller trauma.
+
+### 5. Preserve optionality
+
+Don't lock in decisions you don't need to make yet.
+Default to feature flags for anything significant.
+Default to additive schemas over destructive ones.
+Defer naming, branding, and architectural decisions until they must
+be made.
+
+A decision deferred is a decision that can be made with more
+information. A decision locked in early is a decision that constrains
+every future decision.
+
+---
+
+## Diagnose before repair
+
+Before fixing anything, understand what's actually broken.
+
+This sounds obvious. It isn't. The instinct under pressure is to fix
+fast. The discipline is to slow down and look first.
+
+The pattern:
+1. Reproduce the bug. Get it to happen reliably.
+2. Look at the actual error — Network tab, console logs, Vercel logs,
+   Supabase queries.
+3. Form a hypothesis about WHY.
+4. Verify the hypothesis with one specific data point.
+5. Only then write the fix.
+
+If you skip the diagnosis, you fix things that aren't broken AND miss
+things that are. If you skip the verification, you ship a fix for a
+bug that doesn't exist while the real bug stays.
+
+---
+
+## Tested before trusted
+
+A typecheck-passing build is not a verified build.
+A "looks good by inspection" review is not a tested change.
+A green CI is not a working feature.
+
+Verify by RUNNING the code in conditions that match production:
+- Same data shapes
+- Same integrations live
+- Same user roles you'll have in prod
+
+For multi-user features (calendar, sharing, permissions): test as TWO
+users in TWO browser sessions before declaring done.
+
+---
+
+## The weekly cadence
+
+**Monday:** Review what's broken. Fix what's broken. Don't add new things.
+
+**Tuesday-Thursday:** Build new things. Small, contained, well-tested.
+
+**Friday:** Ship the week's work. No new building on Friday.
+
+**Saturday:** Rest.
+
+**Sunday:** Family. (And the family meeting itself.)
+
+This cadence isn't sacred but the principle is: there's a time for
+fixing, a time for building, a time for shipping, and a time for
+stopping. Mixing them produces fragile software.
+
+---
+
+## Exceptions
+
+This doctrine has exceptions, but they must be NAMED:
+
+- **"Production is broken right now"** — fix takes priority. But still
+  fix the smallest possible thing.
+- **"A paying customer is blocked"** — same.
+- **"Security or privacy issue"** — same. Calendar cross-user leakage
+  was this.
+
+If it's not one of those three, it's not an exception. It's impatience.
+Slow down.
+
+---
+
+## The Sunday check-in, extended
+
+Kendra's question — "Am I better or worse to live with this week?" —
+applies to the codebase too.
+
+Each week, ask:
+- Is this codebase healthier or sicker than last week?
+- Are we adding features faster than we're fixing bugs?
+- Have we accumulated tech debt without a plan to pay it down?
+- Are our integrations more robust or more fragile?
+
+If any answer is wrong, the next week is for stabilization, not new
+features.
+
+---
+
+## Risk pattern: stacking
+
+The most common way the doctrine breaks is stacking — committing to
+multiple things at once instead of one at a time.
+
+Signals:
+- New Claude Code prompts being written before the current one is shipped
+- More than two major projects active at once
+- Excitement about a new idea that would delay the core thing
+- "Let me just also..." appearing in the same session as another fix
+
+When stacking happens, name it directly. "I'm stacking. Cutting two
+things." Pick from the cut list. Get back to one thing at a time.
+
+---
+
+## OAuth and integrations
+
+Integrations are where most production bugs hide because they involve
+state we don't fully control (Google's OAuth, Stripe's billing, Supabase's
+auth).
+
+Rules specific to integrations:
+- Test as multiple users with separate browser profiles. Cross-account
+  state in one browser session causes corruption.
+- After every OAuth connect, verify the saved tokens match the expected
+  user (check the database directly).
+- Validate critical fields at save time. If a refresh_token didn't come
+  back, fail loudly. Don't save a half-broken connection.
+- Surface broken connections in the UI. Silent failures are the worst
+  kind of bug because users don't know to fix them.
+- For any integration, check `console.<provider>.com` periodically
+  for spend, errors, rate limits.
+
+---
+
+## On Claude Code and Cursor
+
+These tools are powerful but they don't enforce discipline. We do.
+
+- A typecheck-passing prompt result is not a verified change.
+- A "looks good by inspection" review is not a tested change.
+- A multi-section prompt is multiple changes, even if it's one PR.
+
+Treat AI-assisted code with the same scrutiny as junior-developer code.
+Sometimes more, because AI is confident even when wrong.
+
+For when to use which tool, see `10_tooling_guide.md`.
+
+---
+
+## What we'd cut before we cut each other
+
+The single most important rule, the one that supersedes all others:
+
+**We cut the business before we cut each other.**
+
+If the business is hurting the marriage, we shrink the business.
+If the business is hurting the kids, we pause the business.
+If the business is hurting our souls, we walk away from the business.
+
+We built this together. We can unbuild it together. No outcome is
+worth losing what we actually built this for.
+
+The doctrine exists in service of building Trellis. The marriage,
+the family, and our wellbeing exist before the doctrine.
+
+If applying the doctrine becomes itself another stack on the pile,
+the doctrine is wrong and we revise it.
+
+---
+
+## How this doctrine evolves
+
+This is a living document. When we learn something new, we update it.
+When a rule turns out to be wrong, we change it.
+
+Rules for edits:
+- Major changes discussed between Remi and Kendra first
+- Small additions (new examples, clarifications) just commit
+- When you violate a rule, document the violation and what you learned
+
+The doctrine is not a constitution. It's a working set of rules we've
+chosen to operate by because we've learned they make us more effective
+and our product more trustworthy.
+
+---
+
+*Last updated: April 27, 2026*
+*Origin: written after a weekend where we shipped fast and broke things,
+diagnosed an incident the right way, and decided to operate differently.*
