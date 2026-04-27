@@ -1,0 +1,88 @@
+# Tooling Guide
+
+When to use Cursor vs Claude Code, and how to be efficient with both.
+
+## The basic rule
+
+**Default to Cursor. Reach for Claude Code only when the task is too big for Cursor.**
+
+Cursor keeps you in the loop, cheap (bundled in subscription), and forces 
+small commits. Claude Code is powerful but expensive and easier to mis-use.
+
+## Use Cursor for
+
+- Bug fixes (single file, narrow change)
+- UI tweaks (color, copy, spacing, layout)
+- Adding or removing fields from existing components
+- Reading diffs before commit
+- Diagnosing code you don't fully understand ("read this and explain")
+- Quick CSS or styling changes
+- Single API endpoint changes
+- Renaming things across small surfaces
+
+Cost: bundled in your Cursor Pro subscription. No per-task billing.
+
+## Use Claude Code for
+
+- New pillars (a feature spanning database + API + components)
+- Multi-section build prompts (Prompts A, B, Phase 4)
+- Database migrations + corresponding code changes
+- Multi-file refactors
+- Generating new scaffolding (boilerplate pages, components)
+- Anything you'd call "a build session" rather than "a quick edit"
+
+Cost: bills your Anthropic API key. A typical multi-file prompt costs 
+$2-15. Phase 4 cost ~$10. Budget accordingly.
+
+## Cost-efficiency rules for Claude Code
+
+### 1. Always include pre-flight
+Every prompt starts with a pre-flight section that lists files to read,
+assumptions to verify, and conditions that should stop the run. This
+catches "the assumption is wrong" before Claude burns 30 minutes on
+the wrong work.
+
+### 2. Be specific about files to read
+"Read these files in full before changes" + a list = Claude reads exactly 
+those files. Vague prompts cause Claude to read more files trying to 
+figure things out. Each file read is tokens. Specific saves money.
+
+### 3. Use Sonnet, not Opus
+`lib/claudeModel.ts` should default to `claude-sonnet-4-5`. Sonnet is
+~5x cheaper than Opus and fine for almost all coding work. Reach for
+Opus only when the task genuinely needs deeper reasoning (ambiguous 
+specs, complex architecture decisions).
+
+### 4. Stop and verify between sections
+Multi-section prompts must stop and typecheck after each section. If
+section 1 is broken, you stop. Don't burn tokens on sections 2-5 that
+build on a broken foundation.
+
+### 5. Don't re-run prompts to fix small issues
+If Claude Code's output is mostly good but has small issues, use Cursor
+to make corrections. Re-running the whole prompt burns the original
+cost again.
+
+### 6. Watch the spend
+Check console.anthropic.com weekly. If a single week is more than $50,
+investigate which prompts ran and whether they were necessary.
+
+## What to NEVER do
+
+- Don't run Claude Code on small tasks. Use Cursor.
+- Don't run Claude Code without a pre-flight section.
+- Don't run Claude Code without a specific file list.
+- Don't run Claude Code on prod data without a backup.
+- Don't run two Claude Code prompts at the same time on overlapping files.
+- Don't commit Claude Code output without reviewing the diff.
+
+## A pattern for the prompt review step
+
+Before running ANY Claude Code prompt:
+
+1. Read the prompt yourself, top to bottom
+2. Ask: do I understand every section?
+3. Ask: are there any surprises or assumptions I haven't validated?
+4. If yes to either, edit the prompt before running.
+
+This 5-minute step saves multi-hour debugging sessions.
