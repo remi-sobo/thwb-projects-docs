@@ -184,3 +184,6 @@ Three risks, named for vigilance:
 
 One without the other still works. Both together is what we're
 aiming for.
+
+All admin lives in Trellis app.
+THWB is a thin marketing/content site. All API endpoints, admin pages, and database operations happen in the Trellis app. THWB embeds components (signup forms, etc.) that call Trellis API endpoints via CORS. One Supabase, one admin, one source of truth.
