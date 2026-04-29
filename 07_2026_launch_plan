@@ -1,155 +1,303 @@
 # 2026 Launch Plan
 
-Timeline, milestones, cut list. Updated April 22, 2026.
+Timeline, milestones, cut list. Updated April 28, 2026.
+
+This is the second version of this document. The first version
+targeted a Memorial Day 2026 launch (May 25). On April 28, after
+weighing what doing it right would actually require, we moved
+the launch to December 2026.
+
+This rewrite reflects the new strategy: audience-first, product
+ready when the audience is warm.
+
+---
+
+## The decision behind this plan
+
+We are not shipping fast. We are shipping right.
+
+Memorial Day was forcing every doctrine principle to break. The
+work remaining (Pillar 06, Stripe, onboarding, OAuth root cause
+fixes, THWB site, content engine, audience build) was not
+realistically compressible into 27 days. Trying would mean
+stacking compounding changes on fragile foundations and shipping
+a half-baked product that adds mental load instead of removing it.
+
+Mental load reduction is the entire value proposition. A buggy
+launch betrays the pitch. Every paying family on a fragile v1
+becomes a referral risk, not a referral asset.
+
+We are choosing 7 months of zero revenue in exchange for:
+- A real product, not a rushed one
+- A warm audience, not cold strangers
+- A sustainable cadence for Kendra (5-8 hrs/week, not 15-20)
+- A doctrine that survives its first real stress test
 
 ---
 
 ## The target
 
-**Mid-July 2026:** Paid beta launches. 5 families. $29/month each.
-
-**End of 2026:** 50-100 paying families.
+**End of December 2026:** Public launch. 50-100 paying families.
 
 **End of 2027:** 500 paying families. $174K ARR.
 
 **End of 2029:** 5,000 paying families. $1.74M ARR. Decision
 point on whether to raise institutional capital.
 
+The end-of-2027 and end-of-2029 targets are unchanged from the
+original plan. The launch date moved 7 months. Compounding starts
+from December instead of July.
+
 ---
 
-## The 12-week plan (April 22 - July 15)
+## The strategy: audience-first
 
-### Weeks 1-2 (Apr 22 - May 5): Foundation
+Cold launches with no audience convert at near-zero. Warm
+launches to a built audience convert at 5-10x. The math is
+brutal and clear.
+
+We are building the audience FIRST through:
+- THWB website with Kendra's essays
+- Weekly Sunday newsletter
+- Podcast (recorded May, launched July)
+- Strategic social posting
+- Personal network activation
+
+By launch day in December, the audience is not strangers. They
+have been reading Kendra for 6 months. They know the philosophy.
+They are waiting for the product.
+
+Trellis launch becomes audience activation, not customer acquisition.
+
+---
+
+## The 8-month plan (May 1 - December 31)
+
+### May 2026 — Foundation Month
+
+Theme: **Stop building product. Start building audience.**
 
 **Product:**
-- Fix mobile Google OAuth (still broken as of today)
-- Running the Home pillar (Pillar 06) v1 shipped
-- Kid view polished
+- OAuth defenses 1, 2, 3 shipped (refresh_token preservation, UI
+  surfacing of broken connections, post-connect validation)
+- Hero copy V4 shipped on trellis.family
+- Cy demo on trellis.family swapped to mental load redistribution
+- No new pillar work this month
 
 **Sites:**
-- trellis.family live at a real URL
-- thehousewebuilt.family live with placeholder structure
-- Both pointing at each other via footers and CTAs
+- thehousewebuilt.family v1 live by end of May
+  - Homepage explaining what THWB is
+  - Newsletter signup as the most prominent CTA
+  - 3-5 essays from Kendra
+  - Our Story page
+  - Footer link to Trellis
+- Email capture form on both trellis.family and thehousewebuilt.family
+
+**Content:**
+- Kendra ships 4 essays in May (one per week)
+- Buttondown account set up and tested
+- Newsletter infrastructure live and ready
+
+**Audience:**
+- Soft personal-network launch of newsletter
+- Email Remi's network (~200 contacts)
+- Email Kendra's network (~300 contacts)
+- LinkedIn / Instagram posts from both
+- Target: 100 subscribers by end of May
 
 **Personal:**
-- Vitality Protocol starts April 27
-- Five Seasons labs booked for baseline
+- Vitality Protocol active
+- Five Seasons labs done
+- Sunday check-ins consistent
 
-### Weeks 3-5 (May 6 - May 26): Content + Billing
+### June 2026 — Content Rhythm + Pillar 06
+
+Theme: **Newsletter cadence locked. Build Pillar 06 right.**
 
 **Product:**
-- Stripe billing integrated
-- Subscription management working
-- Customer support flow stood up (initially remi@)
-- 60-second onboarding tested with 5 friend families (unpaid)
+- Pillar 06 (Running the Home) v1 built
+  - Weekly Meal Plan
+  - Shared Grocery List
+  - Chore Rotation with kid integration
+- Family Meeting integration with Pillar 06
+- Home Right Now integration with Pillar 06
 
 **Sites:**
-- Kendra's first 10 THWB essays live
-- Framework pages (11 pillars philosophical) drafted
-- Our Story page shipped
-- Newsletter signup working
+- Sunday newsletter ships every week (4 issues in June)
+- More essays added to thehousewebuilt.family
 
-**Outreach:**
-- Invite list compiled: 50 potential paid beta families
-- Private Notion/doc for tracking beta family status
+**Content:**
+- Kendra ships 4 more essays
+- Podcast: record first 4 episodes (do not release yet)
 
-### Weeks 6-8 (May 27 - June 16): Pre-launch polish
+**Audience:**
+- First 5-10 friend-family beta users invited to use Trellis
+  (unpaid, just feedback)
+- Weekly check-ins with each beta user
+- Target: 250 newsletter subscribers
+
+### July 2026 — Pillars 7-8 + Podcast Launch
+
+Theme: **Two more pillars live. Podcast goes public.**
 
 **Product:**
-- Second round of friend testing with payments real (soft beta)
-- Content library inside Trellis wired up (pulling from THWB)
-- Family Meeting refined based on feedback
-- Cy voice tuned based on real usage
+- Pillar 07 (Health and Wellbeing) built and shipped
+- Pillar 08 (Your People) built and shipped
 
 **Sites:**
-- Podcast launched (at least 3 episodes recorded and published)
-- THWB newsletter launched
+- Podcast launches with 4 episodes ready
+- Subsequent episodes weekly or biweekly
+- Newsletter continues weekly
 
-**Outreach:**
-- Direct outreach to 25 families for paid beta
-- Warm email + follow-up cadence
+**Content:**
+- Kendra ships 4 more essays
+- Podcast episodes promoted via newsletter
 
-### Weeks 9-11 (June 17 - July 7): Ship and Sell
+**Audience:**
+- Beta user count grows to 10-15
+- First written case study (one beta family)
+- Target: 500 subscribers
+
+### August 2026 — Pillar 09 + Billing + Onboarding
+
+Theme: **The product becomes saleable.**
 
 **Product:**
+- Pillar 09 (Work and Purpose) built and shipped
+- Stripe billing fully integrated and tested
+- 60-second onboarding flow built
+- Subscription management UI
+- Customer support flow stood up
+
+**Sites:**
+- Newsletter weekly
+- More essays
+
+**Content:**
+- Kendra ships 4 more essays
+
+**Audience:**
+- Target: 750 subscribers
+
+### September 2026 — Polish + Cy v1.5
+
+Theme: **Make it feel premium.**
+
+**Product:**
+- Cy upgraded to cross-pillar load redistribution detection
+  (the prompt already drafted, finally built)
+- Mobile PWA polish
+- All OAuth and integration defenses verified end-to-end
+- Family Meeting flow refined based on beta feedback
 - All P0 bugs closed
-- Performance optimized
-- Analytics wired up
-- Support docs written
+- Performance optimization
 
 **Sites:**
 - FAQ populated based on beta feedback
 - Pricing page tuned
 - SEO basics solid
+- Newsletter weekly
 
-**Outreach:**
-- First 5 paid families confirmed and onboarding
-- Weekly calls with each paid family
+**Content:**
+- Kendra ships 4 more essays
 
-### Week 12 (July 8 - July 15): Launch
+**Audience:**
+- Target: 1,000 subscribers
 
-**Goal:** Mid-July public launch. 5 paying families already using
-Trellis. Waitlist open on trellis.family. 50 spots available for
-the first public cohort.
+### October 2026 — Friends-and-Family Paid Pilot
 
-**What launch means:**
-- trellis.family is live
-- thehousewebuilt.family is live
-- Pricing is live
-- Signup is live
-- Stripe charges real money
-- Kendra has a social push planned
-- Remi is available 100% that week for incoming families
+Theme: **First real money.**
+
+**Product:**
+- 5-10 closest households become FIRST paid users at $29/month
+- This is the soft beta — paid but explicit "we're learning together"
+- Tight feedback loops
+- Weekly calls with each paid user
+
+**Sites:**
+- Newsletter weekly
+- Case studies published
+
+**Content:**
+- Kendra ships 4 more essays
+- Mid-month newsletter focused on real family stories
+
+**Audience:**
+- Target: 1,500 subscribers
+
+### November 2026 — Open Beta
+
+Theme: **The audience starts converting.**
+
+**Product:**
+- Open paid beta to first 50 newsletter subscribers who want in
+- Cap at 50 to keep support manageable
+- Direct outreach to most engaged readers
+- Onboarding tested at slightly higher volume
+
+**Sites:**
+- Newsletter weekly
+- Pricing page final
+- All conversion paths optimized
+
+**Content:**
+- Kendra ships 4 essays
+- Newsletter content gets sharper as launch approaches
+
+**Audience:**
+- Target: 2,500 subscribers
+
+### December 2026 — Public Launch
+
+Theme: **The audience meets the product.**
+
+**Product:**
+- Full public launch on trellis.family
+- All pillars live (1-9), Pillars 10 and 11 still deferred
+- Subscription open to all
+- Customer support fully staffed (Remi for now)
+
+**Sites:**
+- Major launch communication via newsletter
+- Social push from both Remi and Kendra
+- Press outreach (small, targeted, not aggressive)
+
+**Audience:**
+- Target end of December: 3,000+ subscribers, 50-100 paying families
 
 ---
 
-## Beyond launch: Q3 and Q4 2026
+## Cut list (not building in 2026)
 
-### Q3 (July - September)
-- Scale from 5 paid families to 25-50
-- Ship Pillars 7-8 (Health and Wellbeing, Your People)
-- Podcast hits weekly cadence
-- First 3 case studies written (real families, real stories)
-
-### Q4 (October - December)
-- Scale to 50-100 paid families
-- Ship Pillar 9 (Work and Purpose)
-- First major content marketing push (Kendra essays picked up by
-  Substack network or similar)
-- First real financial review: are we on track for 2027?
-
----
-
-## The cut list (not building in 2026)
-
-Deferred to 2027 or later:
+This list is unchanged from the previous version with two additions
+(noted).
 
 **Product deferrals:**
 - Pillar 10 (Legacy) — too emotionally complex for v1
-- Pillar 11 (When It's Hard) — same reason, plus needs real
-  crisis design work
+- Pillar 11 (When It's Hard) — needs real crisis design work
 - Plaid integration for banking (CSV import only for v1)
 - Pillar customization and reordering
-- Heavy SoboBucks economy for kids (keep the simple balance)
+- Heavy SoboBucks economy for kids (keep simple balance)
 - Voice-based meal logging
 - Photo-based meal logging
 - Real HealthKit sync
-- Native iOS app (web app only)
-- Native Android app (web app only)
+- Native iOS app
+- Native Android app
+- **Floating Action Button (quick-add) — captured in Slack, build v1.5 (NEW addition)**
+- **Capacitor wrapper apps for App Store — Year 2 (NEW addition)**
 
-**Product boundaries:**
-- YGB Math inside Trellis (this is a separate project)
+**Product boundaries (unchanged):**
+- YGB Math inside Trellis (separate project)
 - Jaiye's personal website (separate project)
 - Any AI features beyond Cy's current scope
-- Marketplace or directory features
-- Community/forum features for families
-- Live events inside the app
+- Marketplace features
+- Community/forum features
 
 **Content deferrals:**
 - Full THWB book (book proposal planning only)
 - Speaking tour (ad hoc, not scheduled)
 - Conference (not in 2026)
-- Full video production beyond podcast (minimal video in 2026)
+- Heavy video production (minimal video in 2026)
 
 **Business deferrals:**
 - Raising outside capital (not until 100+ families AND both agree)
@@ -160,53 +308,51 @@ Deferred to 2027 or later:
 
 ---
 
-## What "done" looks like for July 15
+## What "done" looks like for December 2026
 
 **The product is ready if:**
-- All 5 beta families can onboard in under 60 seconds
-- Mobile works perfectly on iPhone and Android
-- Stripe charges and refunds work
-- Core journeys (login, add task, do family meeting, kid view)
-  all work without errors
-- Cy responds in under 5 seconds on average
-- The 5 families are willing to pay $29/mo real money
+- All 9 pillars (1-9) feel polished, not rushed
+- Onboarding works in under 60 seconds
+- Mobile (PWA) works smoothly on iPhone and Android
+- Stripe charges and refunds work flawlessly
+- All paid pilot feedback has been incorporated
+- Cy responds reliably with the load redistribution capability
+- No critical bugs reported by paid pilot users in November
 
-**The site is ready if:**
-- trellis.family loads in under 2 seconds on mobile
-- thehousewebuilt.family loads and has real content
-- Both have working signup flows
-- Both link to each other correctly
-- FAQ answers the 20 most common questions
-- Pricing is clear and friction-free
+**The audience is ready if:**
+- 2,500+ engaged newsletter subscribers
+- 8+ months of consistent Sunday newsletter cadence
+- 20+ podcast episodes published
+- 25+ essays on thehousewebuilt.family
+- At least 5 substantive case studies / testimonials from beta
 
 **The team is ready if:**
-- Remi has capacity to support 10-25 incoming families in July
-- Kendra has capacity to write weekly through the launch
-- The Sunday check-in has been consistent for 12 weeks
+- Remi has capacity to support 50-100 incoming families in December
+- Kendra has sustained sustainable writing pace for 8 months
+- Sunday check-in has been consistent throughout
 - Neither of us has burned out
+- Marriage is stronger, not weaker, after the build
 
 ---
 
 ## What failure looks like
 
-We need to be honest about what "didn't work" would mean. Three
-scenarios:
+Three honest scenarios to plan against:
 
-### Scenario A: No paying families
-If by September 2026 we have zero paying families, something's
-broken. Not the product. The distribution. We'd pause feature
-work and focus 100% on outreach and conversion.
+### Scenario A: Audience never builds
+By August 2026, if newsletter is below 250 subscribers and growth
+is flat, distribution is broken. We pause feature work, focus on
+audience-building tactics (more outreach, guest posts, partnerships).
 
-### Scenario B: 20 paying families, steady
-This is actually fine. It's slower than target but it's real.
-We'd keep building at a sustainable pace, keep iterating, and
-let word of mouth do its thing through 2027.
+### Scenario B: Product takes longer than 8 months
+By November 2026, if Pillars 7-9 aren't shipped and tested, we
+launch in January 2027 with what's ready. We don't rush to hit
+December for an artificial date — same lesson, applied again.
 
-### Scenario C: 5 paying families, mixed feedback
-Also okay, but requires discipline. The temptation will be to
-add features to win the next family. The right move is probably
-to spend more time with the 5 we have, figure out what's
-actually sweet for them, and double down.
+### Scenario C: Friends-and-family pilot reveals deep issues
+If October pilot users tell us the product isn't ready, we delay
+public launch to Q1 2027. Better to have a smaller November/December
+soft launch than a broken public launch.
 
 ---
 
@@ -217,25 +363,64 @@ actually sweet for them, and double down.
 - $17K-$35K ARR
 - <5% monthly churn
 - NPS above 50
-- 6-7 pillars live
+- 9 pillars live, 2 deferred to 2027
 
 **Qualitative:**
-- At least 10 testimonials we'd publish
-- Kendra's content library has 30+ pieces
-- Podcast has 20+ episodes
+- 25+ THWB essays published
+- 20+ podcast episodes
+- 5+ documented case studies
 - Marriage intact and strong
 - Kids thriving
 - Sunday check-ins consistently green
 
-If both columns are hit, 2026 was a great year. If quantitative
-wins but qualitative loses, we did it wrong.
+The qualitative column is non-negotiable. If quantitative wins
+but qualitative loses, we did it wrong, regardless of revenue.
 
 ---
 
-## The north star, again
+## The supreme rule (unchanged)
 
 **We cut the business before we cut each other.**
 
 Every decision on this timeline, every feature, every launch, is
 subordinate to that rule. If the plan starts breaking the family,
-we change the plan. The plan is a servant, not a master.
+we change the plan.
+
+The plan moved from May to December because we were honest about
+what May would have cost the family. End-of-year is the version
+of this plan that lets us still be married, still be present
+parents, and still ship something we're proud of.
+
+The plan is a servant, not a master.
+
+---
+
+## The doctrine moment this plan represents
+
+This rewrite IS the doctrine in action. Six rules:
+
+**Test before trust** — we are giving ourselves time to actually
+test, not ship and pray.
+
+**One change at a time** — we are no longer stacking simultaneous
+fixes, features, and integrations into the same week.
+
+**Reversible** — every monthly milestone is independently
+revertable; nothing on the timeline locks us into outcomes we'd
+regret.
+
+**Small radius** — each month touches 1-2 systems, not all of them.
+
+**Preserve optionality** — by waiting, we keep flexibility on
+pricing, feature scope, and partnership decisions.
+
+**Diagnose before repair** — we diagnosed that the original plan
+was breaking before we tried to repair it. That diagnosis became
+this rewrite.
+
+---
+
+*Last updated: April 28, 2026*
+*Origin: rewritten the same day Remi and Kendra decided to choose
+craft over speed. End-of-year over end-of-May. Audience-first over
+product-first. Marriage and family over arbitrary deadlines.*
